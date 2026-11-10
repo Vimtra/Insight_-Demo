@@ -1922,11 +1922,18 @@ a.dmx-outcome-card:hover .dmx-outcome-icon { background: var(--color-brand); col
   font-size: 1rem;
 }
 
+/* Tablet: 3 + 2 layout with the second row filling the full width */
 @media (max-width: 1199.98px) {
-  .dmx-outcomes { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .dmx-outcomes { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .dmx-outcomes > li { grid-column: span 2; }
+  .dmx-outcomes > li:nth-child(n + 4) { grid-column: span 3; }
 }
+/* Large phones: 2 + 2 + 1 (last card full width) */
 @media (max-width: 767.98px) {
   .dmx-outcomes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dmx-outcomes > li,
+  .dmx-outcomes > li:nth-child(n + 4) { grid-column: auto; }
+  .dmx-outcomes > li:last-child { grid-column: 1 / -1; }
 }
 
 /* Longer hero heading on the landing page: slightly smaller scale */
@@ -1955,4 +1962,5 @@ a.dmx-row-arrow:focus-visible {
 @media (max-width: 575.98px) {
   .dmx-outcome { padding: 48px 0; }
   .dmx-outcomes { grid-template-columns: 1fr; }
+  .dmx-outcomes > li:last-child { grid-column: auto; }
 }
