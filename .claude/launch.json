@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "site",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8777", "--directory", "C:/Users/DESIGN/AppData/Local/Temp/claude/d6c10efb46c7468f/2a1d93e8-5885-4775-8699-a23c18f26ea4/scratchpad/ghp"],
+      "port": 8777
+    }
+  ]
+}
